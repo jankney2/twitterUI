@@ -3,6 +3,7 @@ import React from 'react'
 import {View, Text, FlatList, StyleSheet} from 'react-native' 
 import SafeAreaView from 'react-native-safe-area-view';
 import Header from './Header'
+import Tweet from './Tweet'
 
 let id=0
 const posts=[
@@ -77,7 +78,16 @@ export default Home=()=>{
             <Header activeRoute='Home'/>
             <FlatList 
             data={posts}
-            renderItem={}
+            renderItem={({item})=>(
+                <Tweet
+                accName={item.name}
+                handle={item.handle}
+                photoUrl={item.photoUrl}
+                tweetContent={item.tweetContent}
+                />
+    )
+        }
+            keyExtractor={item=>item.id}
             />
         </SafeAreaView>
     )
