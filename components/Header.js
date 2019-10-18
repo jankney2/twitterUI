@@ -20,7 +20,10 @@ export default Header=(props)=>{
     <Image source={{uri:'https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'}}
     style={styles.image}
     />
-    <Text style={{color:'white'}}>{props.activeRoute}</Text>
+    <Text style={{
+        color:'white', 
+        fontSize:18
+}}>{props.activeRoute}</Text>
 <Text>{gear}</Text>
 </View>
 </View>

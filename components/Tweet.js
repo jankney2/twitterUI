@@ -12,9 +12,9 @@ export default Tweet = props => {
   let [retweetStatus, toggleRetweet]=useState(false)
   
   const heart = <Icon name="heart-o" size={20} color={heartStatus?'red':'#fff'} />;
-  const retweet = <Icon name="retweet" size={20} color="#fff" />;
+  const retweet = <Icon name="retweet" size={20} color={retweetStatus?'#39ff14':"#fff"} />;
   const comment = <Icon name="comment-o" size={20} color="#fff" />;
-  const share = <Icon name="share" size={20} color="#fff" />;
+  const share = <Icon name="share" size={20} color={'#fff'} />;
 
   return (
     <View style={{
@@ -45,19 +45,21 @@ source={{uri: props.photoUrl}}
           {heart}
           </TouchableOpacity>
           
-          <TouchableOpacity>
-          {share}
+          <TouchableOpacity onPress={()=>{
+            toggleRetweet(!retweetStatus)
+          }}>
+          {retweet}
+
           </TouchableOpacity>
-          
           <TouchableOpacity>
           {comment}
 
           </TouchableOpacity>
           
           <TouchableOpacity>
-          {retweet}
-
+          {share}
           </TouchableOpacity>
+          
 
         </View>
     </View>
