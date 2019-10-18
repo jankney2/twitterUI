@@ -1,6 +1,10 @@
 import React from 'react'
 import {SafeAreaView, Text, View, StyleSheet, Image} from 'react-native'
 
+import Icon from 'react-native-vector-icons/FontAwesome'
+const gear= <Icon name='gears' color='#fff' size={20} />
+
+
 
 
 export default Header=(props)=>{
@@ -9,14 +13,17 @@ export default Header=(props)=>{
     <Image source={{uri:'https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'}}
     style={styles.image}
     />
-    <Text>{props.activeRoute}</Text>
-<Text>Icon placeholder</Text>
+    <Text style={{color:'white'}}>{props.activeRoute}</Text>
+<Text>{gear}</Text>
 </View>
     )
 }
 
 const styles=StyleSheet.create({
     contain:{
+        width: '95%', 
+        marginLeft:'2.5%',
+        padding:10,
 display:'flex', 
 flexDirection:'row', 
 alignItems:'center', 

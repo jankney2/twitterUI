@@ -74,7 +74,8 @@ const posts=[
 
 export default Home=()=>{
     return(
-        <SafeAreaView>
+
+        <>
             <Header activeRoute='Home'/>
             <FlatList 
             data={posts}
@@ -87,14 +88,8 @@ export default Home=()=>{
                 />
     )
         }
-            keyExtractor={item=>item.id}
+            keyExtractor={item=>item.id.toString()}
             />
-        </SafeAreaView>
+        </>
     )
 };
-
-const styles=StyleSheet.create({
-    header:{
-        backgroundColor:'red'
-    }
-})
