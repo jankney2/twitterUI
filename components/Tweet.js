@@ -10,7 +10,7 @@ export default Tweet = props => {
   return (
     <View style={styles.tweetContain}>
       
-<ImageBackground style={styles.leftCol}
+<Image style={styles.leftCol}
 source={{uri: props.photoUrl}}
 />
 
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     marginLeft: Dimensions.get('screen').width * 0.05,
     width: Dimensions.get('screen').width * 0.9,
-borderBottomColor:'white', 
-borderBottomWidth:3,
+borderBottomColor:'gray', 
+borderBottomWidth:1,
 margin:5, 
 padding:5
   },
@@ -61,11 +61,11 @@ padding:5
     padding:5
   }, 
   leftCol: {
-      flex:1, 
-      borderWidth:4, 
-      borderColor:'red', 
-      padding:50,
-      borderRadius:15,
+    //   flex:1, 
+    //   borderWidth:4, 
+    //   borderColor:'red', 
+      padding:25,
+      borderRadius:25,
 
   }
 });
