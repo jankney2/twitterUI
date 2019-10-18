@@ -8,12 +8,41 @@ import Notifications from './components/Notifications';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
+import Icon from 'react-native-vector-icons/FontAwesome'
+
+
+
+
 const tabNav = createBottomTabNavigator(
   {
-    Home: Home,
-    Messages: Messages,
-    Search: Search,
-    Notifications: Notifications,
+    Home:{
+      screen:Home,
+      navigationOptions:({tintColor})=>({
+        tabBarIcon:<Icon name='home'
+        color={tintColor}
+        size={24}
+        />
+      })      
+    },  
+    Search:{
+      screen:Search,
+      navigationOptions:()=>({
+        // tabBarIcon:icon
+      })      
+    },  
+    Notifications:{
+      screen:Notifications,
+      navigationOptions:()=>({
+        // tabBarIcon:icon
+      })      
+    },  
+    Messages:{
+      screen:Messages,
+      navigationOptions:()=>({
+        // tabBarIcon:icon
+      })      
+    },  
+      
   },
   {
     tabBarOptions: {
